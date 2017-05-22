@@ -1,6 +1,6 @@
 package aufgabe2;
 
-public class Point3D extends point {
+public class Point3D extends point { //siehe point
 	double z;
 	public Point3D(double x, double y, double z){
 		super(x,y);
