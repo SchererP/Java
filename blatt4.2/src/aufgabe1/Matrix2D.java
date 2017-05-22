@@ -3,7 +3,8 @@ package aufgabe1;
 import java.util.Arrays;
 
 public class Matrix2D {
-	double[][] matrix;
+	double[][] matrix; //Instanzvariablen sollten private sein
+	
 	public Matrix2D(double...werte){
 		int n = (int) Math.ceil(Math.sqrt(werte.length));
 		int k = 0; 
@@ -26,7 +27,7 @@ public class Matrix2D {
 		matrix = new double[n][n];
 
 	}
-	public double[][] getMatrix(){
+	public double[][] getMatrix(){ //nur sinnvoll bei privaten Variablen
 		return matrix;
 	}
 	
@@ -36,7 +37,7 @@ public class Matrix2D {
 	}
 	
 	public String toString(){
-		String ret = new String();
+		String ret = new String(); //effizienter: Stringbuilder verwenden
 		for(int i = 0; i < matrix.length; i++){
 			ret += Arrays.toString(matrix[i]) + "\n";
 			
