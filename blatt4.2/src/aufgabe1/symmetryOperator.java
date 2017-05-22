@@ -7,7 +7,7 @@ public class symmetryOperator implements Operator {
 		for(int i = 0; i < ((a.matrix.length)/2) + 1; i++){
 			for(int j = 0; j < a.matrix.length; j++){
 				if(m[i][j] != m[j][i]){
-					 c++;
+					 c++; //kompakter: return false;
 				}if(c != 0){
 				break;
 				}
@@ -18,5 +18,6 @@ public class symmetryOperator implements Operator {
 		}else{
 			return false;
 		}
+		//mit obiger Lösung: return true;
 	}
 }
